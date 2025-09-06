@@ -23,7 +23,7 @@ const loadingCities = async () => {
 
 app.get("/cityList", (req: Request, res: Response) => {
   const country = req.query.country as string;
-  console.log(country);
+
 
   const cities = db.data.cities;
   const filteredCities = cities.filter((cityObj) => {
@@ -40,7 +40,6 @@ app.get("/cityList", (req: Request, res: Response) => {
 
 app.get("/countryList", (req: Request, res: Response) => {
   const country = req.query.country as string;
-  console.log(country);
 
   const cities = db.data.cities;
   const countryNames: string[] = [];
